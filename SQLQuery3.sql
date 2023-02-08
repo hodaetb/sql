@@ -1,5 +1,5 @@
 ﻿--1
-SELECT SUM(Quantity)
+SELECT SUM(UnitPrice*Quantity) as Total
 FROM [dbo].[Sale_Table]
 
 --2
@@ -7,7 +7,7 @@ select count (distinct Customer) as Number_of_customrs
 from [dbo].[Sale_Table]
 
 --3
-SELECT Product , SUM(Quantity) as count
+SELECT Product , SUM(Quantity) as Quantity
 FROM [dbo].[Sale_Table]
 GROUP BY Product
 
